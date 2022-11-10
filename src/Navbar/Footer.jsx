@@ -24,10 +24,10 @@ const Bottom = () => {
             alt="img"
           />
           <Text textAlign={"left"} mt={16} w={"80%"}  ml={[0,0,"200px","200px"]}>
-            Learn about the app for iPhone, iPad and Android.
+            Learn about the LYST app for iPhone, iPad and Android.
           </Text>
           <Text ml={[0,0,"100px","100px"]} textAlign={"left"}>
-            © 2022 DU
+            © 2022 LYST
           </Text>
         </Box>
         <SimpleGrid columns={[1, 1, 1, 2]} gap={20}>
@@ -35,18 +35,18 @@ const Bottom = () => {
             <h2 style={{ fontSize: "25px", fontWeight: "600" }}>
               INTERNATIONAL
             </h2>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - AU</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - CA</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - UK</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - Österreich</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - Schweiz</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - Deutschland</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - España</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - France</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - Italia</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - 日本</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - België</Text>
-            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>DU - Nederland</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - AU</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - CA</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - UK</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - Österreich</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - Schweiz</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - Deutschland</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - España</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - France</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - Italia</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - 日本</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST - België</Text>
+            <Text fontWeight={500} cursor="pointer" _hover={{color:"blue", textDecoration:"underline"}}>LYST- Nederland</Text>
           </Box>
           <Box bg="f5f4f2" textAlign="left" pl={50} ml={[0,0,20,20]}>
             <h2 style={{ fontSize: "25px", fontWeight: "600" }}>
