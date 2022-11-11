@@ -6,16 +6,25 @@ import {
   InputGroup,
   InputLeftElement,
   Input,
-  SimpleGrid,
   } from "@chakra-ui/react";
   import { SearchIcon } from "@chakra-ui/icons";
-import {React} from "react";
-//  import { Link,NavLink } from "react-router-dom";
- import styles from "../styles/navbar.module.css"
+import {React,useState} from "react";
+ import { Link,NavLink,useNavigate } from "react-router-dom";
+ import styles from "../styles/navbar.module.css";
+ import "./Navbar.css";
+ import { BsFillPersonFill } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
+import img1 from "../Image/dressup1.png"
+import { createContext, useContext } from "react";
+import { AuthContext } from "../Components/Context/AuthContext";
+import data from "../db.json"
   
+export const AppContext = createContext();
   function Navbar() {
-   
+    const { isAuth, logOutUser, email } = useContext(AuthContext);
+    const [modalOpen, setModalOpen] = useState(false);
+    
+    const navigate = useNavigate();
     // const link = [
     //   {
     //     path: "/womens",
@@ -27,7 +36,12 @@ import { AiOutlineHeart } from "react-icons/ai";
     //   },
     // ];
     return (
-      <div className="navbar">
+      <div style={
+        {
+          borderBottom:"1px solid black",
+        }
+        }
+      >
         <Box
           alignItems="top"
           bg="white"
@@ -36,26 +50,26 @@ import { AiOutlineHeart } from "react-icons/ai";
           color="black"
           pb={0}
           borderTop={"1px solid black"}
-          bor
         >
-          {/* <Link to="/"> */}
-            <Image
+          <Link to="/">
+          <Image
               h={[4, 8, 10, 10]}
               ml={[0, 0, 3, 3]}
-              w={["60px", "80px", 180, 180]}
+              w={["60px", "60px", 180, 180]}
               position="absolute"
+             
               display={["block", "block", "none", "none"]}
               src="https://i.postimg.cc/TPBz6N0w/Screenshot-2022-08-24-164137.png"
-              alt="Lyst"
+              alt="lyst"
             />
-          {/* </Link> */}
+          </Link>
           <Box display="flex" float="right" padding={0} gap="10px">
             <Text
               mt="5px"
-              display={["none", "none", "block", "block"]}
+              display={[ "none", "none","block", "block"]}
               fontSize="lg"
             >
-              IN-USS
+              CN-US$
             </Text>
             <select name="" placeholder="Help" style={{ outline: "0px",
   border: "0px"}}>
@@ -82,127 +96,91 @@ import { AiOutlineHeart } from "react-icons/ai";
               _hover={{
                 bg: "grey",
               }}
-              className="butt1"
+              onClick={() => navigate("/login")}
+              className="but"
             >
-              
-                Sign up or Log in
-             
+              {isAuth ? (
+                <>
+                  <button style={{ marginBottom: "0px" }} onClick={logOutUser}>
+                    LOGOUT
+                  </button>
+                </>
+              ) : (
+                `Sign up or Log in`
+              )}
             </Button>
           </Box>
         </Box>
-        <Box mt="30px"
-          bg="white"
-          w="100%"
-          p={6}
-          color="black"
-          pb={0}
-          borderBottom={"1px solid black"}
-          bor
-        >
-          <Box display="flex" gap={30} alignItems="center">
-            {/* <Link to="/"> */}
-              <Image
-                h={[0, 0, 10, 10]}
-                ml={[0, 0, 0, 0]}
-                w={["0px", "80px", 160, 160]}
-                display={["none", "none", "block", "block"]}
-                src="https://i.postimg.cc/TPBz6N0w/Screenshot-2022-08-24-164137.png"
-                alt="LYST"
-              />
-            {/* </Link> */}
-            {/* {link.map((elem) => (
-              <NavLink
-                className={({ isActive }) =>
-                  !isActive ? styles.active : styles.default
-                }
-                key={elem.path}
-                to={elem.path}
-              >
-                <Text
-                  display={["none", "none", "block", "block"]}
-                  mt={0}
-                  ml={"-30px"}
-                  mr={"-30px"}
-                  fontSize={["0px", "0px", "lg", "lg"]}
-                >
-                  {elem.title}
-                </Text>
-              </NavLink>
-            ))} */}
-            <InputGroup
-              position={["absolute", "absolute", "relative", "relative"]}
-            >
-              <InputLeftElement
-                pointerEvents="none"
-                children={<SearchIcon color="gray.300" />}
-              />
-              <Input
-                type={"search"}
-                w={["85%", "85%", "100%", "100%"]}
-                h={["30px", "30px", "40px", "40px"]}
-                fontSize={["13px", "13px", "16px", "16px"]}
-                isInvalid
-                errorBorderColor="black"
-                placeholder="SEARCH (EG. VALENTINO DRESSES)"
-               
-              />
-            </InputGroup>
-            <Box
-              mt={["-1000px", "-1000px", "0px", "0px"]}
-              mr={["-0px", "0px", "-200px", "-200px"]}
-              ml={["75px", "75px", "10px", "10px"]}
+       
+         <div className="inner_header_bottom">
+        <div className="headder__bottom_img">
+          <Link to="/">
+            <img src={img1} alt="lyst"/>
+          </Link>
+        </div>
+        <div className="header_bottom">
+          <span
+            className="woman"
+            onClick={() => {
+              setModalOpen(!modalOpen);
+            }}
+          >
+            WOMAN
+          </span>
+          <span
+            onClick={() => {
+              setModalOpen(!modalOpen);
+            }}
+          >
+            <Link className="Link_remove" to="/product/men"> MEN</Link>
+          </span>
+          <div className="header_bottom_search">
+            <i className="fa fa-search" aria-hidden="true"></i>
+            <input
+              type="text"
+              placeholder='Search (e.g. "Valentino dresses")'
+            />
+            {/* {filderedDate.length != 0 && (
+              <div className="append_div">
+                {filderedDate.slice(0, 8).map((value, key) => {
+                  return (
+                    <div className="innter_append_div">
+                      <img src={value.Image}></img>
+                      <span>{value.title}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            )} */}
+          </div>
+        </div>
+        <Box
+            
+              mt={["20px"]}
             >
              
                 <AiOutlineHeart className={styles.cart} />
              
             </Box>
-          </Box>
-          <Box display={["block", "block", "none", "none"]}>
-            <SimpleGrid
-              columns={5}
-              m={"auto"}
-              textAlign={"center"}
-              w={"100%"}
-              ml={"2px"}
-              h="30px"
+         
+      </div>
+           
+       
+        <Box h="40px" w={"50%"} float="right">
+          {isAuth ? (
+            <Text
+              float={"right"}
+              pr="10px"
+              pl="10px"
+              bg={"#dfe8f9"}
+              borderRadius="10px"
             >
-              {/* {link.map((elem) => (
-                <NavLink
-                  className={({ isActive }) =>
-                    !isActive ? styles.iactive : styles.idefault
-                  }
-                  key={elem.path}
-                  to={elem.path}
-                >
-                  <Text mt={"2px"} w={"66px"} fontSize="16px">
-                    {elem.title}
-                  </Text>
-                </NavLink>
-              ))} */}
-              <Text mt={"2px"} fontSize="16px">
-                IN-USS
-              </Text>
-              <select name="" placeholder="Help" id="navselect">
-              <option value="">Help center</option>
-              <hr />
-              <Spacer />
-              <option value="">Contact us</option>
-              <hr />
-              <Spacer />
-              <option value="">About us</option>
-              <hr />
-              <Spacer />
-              <option value="">Careers</option>
-              <hr />
-              <Spacer />
-            </select>
-              <Box ml="30px">
-                
-                  <AiOutlineHeart className={styles.cart} />
-               
-              </Box>
-            </SimpleGrid>
-          </Box>
+              <BsFillPersonFill />
+              {email}
+            </Text>
+          ) : (
+            ""
+          )}
         </Box>
         
       </div>

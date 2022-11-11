@@ -23,7 +23,7 @@ const Bottom = () => {
             src={img2}
             alt="img"
           />
-          <Text textAlign={"left"} mt={16} w={"80%"}  ml={[0,0,"200px","200px"]}>
+          <Text textAlign={"left"} mt={16} w={"80%"}  ml={[0,0,"100px","100px"]}>
             Learn about the LYST app for iPhone, iPad and Android.
           </Text>
           <Text ml={[0,0,"100px","100px"]} textAlign={"left"}>

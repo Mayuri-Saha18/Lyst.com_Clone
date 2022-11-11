@@ -1,6 +1,8 @@
 import React from "react"
 import { Slider } from "./Carousel/Slider";
 import "./HomePage.css";
+import Footer from "../Navbar/Footer"
+// import Navbar from "../Navbar/Navbar"
 function Home()  {
     const data = [
         {
@@ -24,7 +26,7 @@ function Home()  {
       
     return (
         <div>
-          
+          {/* <Navbar/> */}
             <div className="imgbg" >
             <Slider data={data} />
            </div>
@@ -153,9 +155,9 @@ Hit the heart to receive alerts on the latest drops from your favourite brands.<
 Lyst members are notified when an item goes on sale.</h6>
     </div>
   </div>
-    <div id="signupdiv">
+    <div id="signupdivm">
     <h2 className="h3el" id="h3el">SIGN UP FOR<br></br>SMARTER<br></br> SHOPPING</h2>
-    <button id="btn" type="submit" > Join➔ </button>
+    <button id="btnm" type="submit" > Join➔ </button>
     </div>
     
 </div>
@@ -248,7 +250,7 @@ Lyst members are notified when an item goes on sale.</h6>
         <h5>Belts</h5>
     </div>
 </div>
-
+<Footer/>
 </div>
 
 

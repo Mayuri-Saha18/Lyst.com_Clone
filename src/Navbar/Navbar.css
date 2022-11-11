@@ -1,68 +1,4 @@
-.navbar{
-  border-bottom:1px solid black;
-}
-
-.active {
-    color: black;
-    font-size: 20px;
-    padding: 2rem;
-    text-decoration: none;
-  }
-  .active:hover {
-      color: teal;
-  }
-  .default:hover {
-      color: teal;
-  }
-  .default {
-    border-bottom: 1px black;
-    font-size: 20px;
-    padding: 1rem;
-    text-decoration: underline;
-  }
-  .iactive {
-    color: black;
-    font-size: 20px;
-    text-decoration: none;
-  }
-  .iactive:hover {
-      color: teal;
-  }
-  .idefault:hover {
-      color: teal;
-  }
-  .idefault {
-    border-bottom: 1px black;
-    font-size: 20px;
-    text-decoration: underline;
-  }
-  .cart{
-    padding: 0px;
-    margin: 0px;
-    font-size: 30px;
-  }
-  .cart:hover{
-    cursor: pointer;
-    color: red;
-  }
-  .but {
-    background-color: black;
-    color: white;
-    padding: 3px;
-    padding-right: 6px;
-    padding-left: 6px;
-    border-radius: 5px;
-    margin-top: -10px;
-  }
-  .but:hover {
-    background-color: rgb(39, 37, 37);
-  }
-
-
-
-
-
-  .main_header{
+.main_header{
   
     /* border: 2px solid red; */
     border-bottom: 1px solid black;
@@ -107,15 +43,17 @@
       display: flex;
       justify-content: center;
       align-content: center;
-      margin-left: 30px;
+      margin-left: 40px;
       margin-top: 100x;
   }
   .headder__bottom_img img{
-      width: 90px;
-      height: 30px;
+      width: 100px;
+      height: 80px;
       margin-top: 10px;
+      border-radius: 50%;
   }
   .inner_header_bottom{
+    margin-top: 40px;
       display: flex;
       justify-content: space-between;
   }
@@ -230,4 +168,55 @@
       
   }
   
+  @media only screen and (max-width: 990px){
+      
   
+  .inner_header_top{
+      display: none;
+  }
+  
+  .inner_header_bottom{
+      display: none;
+  }
+  
+  .media_div{
+      display: block;
+      display: flex;
+      justify-content: space-between;
+  }
+   
+  
+  }
+  
+  @media only screen and (max-width: 1115px){
+  
+      .header_bottom input{
+          width:520px;
+          height: 40px;
+          margin-right: 30px;
+          border: none;
+          outline: none;
+          font-size: 17px;
+      }
+      .header_bottom_search{
+          /* border: 1px solid black; */
+          margin-right: 30px;
+          width: 800px;
+          padding-left: 10px;
+      }
+      .header_bottom{
+          /* border: 2px solid blue; */
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          margin-bottom: 10px;
+          width: 800px;
+      }
+  
+  }
+  
+  
+  .Link_remove{
+      text-decoration: none;
+      color: black;
+  }
