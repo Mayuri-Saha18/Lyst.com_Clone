@@ -22,7 +22,7 @@ export const Slider = ({ data }) => {
               <img
                 src={item.image}
                 alt=""
-                style={{ width: "90%" ,height:"500px"}}
+                style={{ width: "95%" ,height:"500px"}}
               />
             )}
           </div>
