@@ -69,8 +69,10 @@ export const Sale=()=>{
          {isActive && (
              <div className="dropdwonContent">
              <div className="dropdownItems">
-             <p><input type="checkbox" name="" id="" />Women's</p>
-             <p><input type="checkbox" name="" id="" />Men's</p>
+             <p><input type="checkbox" name="" id="" />on sale</p>
+             <p><input type="checkbox" name="" id="" />20% off or more</p>
+             <p><input type="checkbox" name="" id="" />50% off or more</p>
+             <p><input type="checkbox" name="" id="" />70% off or more</p>
              </div>
          </div>
          )}
@@ -89,8 +91,11 @@ export const Price=()=>{
          {isActive && (
              <div className="dropdwonContent">
              <div className="dropdownItems">
-             <p><input type="checkbox" name="" id="" />Women's</p>
-             <p><input type="checkbox" name="" id="" />Men's</p>
+             <p><input type="checkbox" name="" id="" />Below $1000</p>
+             <p><input type="checkbox" name="" id="" />Below $500</p>
+             <p><input type="checkbox" name="" id="" />Below $200</p>
+             <p><input type="checkbox" name="" id="" />Below $100</p>
+    
              </div>
          </div>
          )}
@@ -102,18 +107,11 @@ export const Shipping=()=>{
    
     return (
         <div className="dropdown">
-         <div className="dropdownbtn" onClick={e=>setIsActive(!isActive)}>
+         <div className="dropdownbtn" >
              Shipping
              <BsChevronDown />
          </div>
-         {isActive && (
-             <div className="dropdwonContent">
-             <div className="dropdownItems">
-             <p><input type="checkbox" name="" id="" />Women's</p>
-             <p><input type="checkbox" name="" id="" />Men's</p>
-             </div>
-         </div>
-         )}
+       
         </div>
     );
 };
@@ -122,18 +120,11 @@ export const Color=()=>{
    
     return (
         <div className="dropdown">
-         <div className="dropdownbtn" onClick={e=>setIsActive(!isActive)}>
+         <div className="dropdownbtn" >
              Color
              <BsChevronDown />
          </div>
-         {isActive && (
-             <div className="dropdwonContent">
-             <div className="dropdownItems">
-             <p><input type="checkbox" name="" id="" />Women's</p>
-             <p><input type="checkbox" name="" id="" />Men's</p>
-             </div>
-         </div>
-         )}
+       
         </div>
     );
 };
@@ -143,18 +134,11 @@ export const Materials=()=>{
    
     return (
         <div className="dropdown">
-         <div className="dropdownbtn" onClick={e=>setIsActive(!isActive)}>
+         <div className="dropdownbtn" >
              Materials
              <BsChevronDown />
          </div>
-         {isActive && (
-             <div className="dropdwonContent">
-             <div className="dropdownItems">
-             <p><input type="checkbox" name="" id="" />Women's</p>
-             <p><input type="checkbox" name="" id="" />Men's</p>
-             </div>
-         </div>
-         )}
+        
         </div>
     );
 };
@@ -164,18 +148,11 @@ export const Designers=()=>{
    
     return (
         <div className="dropdown">
-         <div className="dropdownbtn" onClick={e=>setIsActive(!isActive)}>
+         <div className="dropdownbtn" >
              Designers
              <BsChevronDown />
          </div>
-         {isActive && (
-             <div className="dropdwonContent">
-             <div className="dropdownItems">
-             <p><input type="checkbox" name="" id="" />Women's</p>
-             <p><input type="checkbox" name="" id="" />Men's</p>
-             </div>
-         </div>
-         )}
+        
         </div>
     );
 };
@@ -185,18 +162,11 @@ export const Stores=()=>{
    
     return (
         <div className="dropdown">
-         <div className="dropdownbtn" onClick={e=>setIsActive(!isActive)}>
+         <div className="dropdownbtn" >
              Stores
              <BsChevronDown />
          </div>
-         {isActive && (
-             <div className="dropdwonContent">
-             <div className="dropdownItems">
-             <p><input type="checkbox" name="" id="" />Women's</p>
-             <p><input type="checkbox" name="" id="" />Men's</p>
-             </div>
-         </div>
-         )}
+        
         </div>
     );
 };
