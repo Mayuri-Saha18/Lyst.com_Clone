@@ -5,7 +5,9 @@ import  Home from "../Components/Home";
 // import Mens from "../Components/Mens";
 import Login from "../Components/Login";
 import { Mens } from "../Components/Products/men";
-//  import PrivateRoutes from "./PrivateRoutes";
+import { Womens } from "../Components/Products/women";
+import Details from "../Components/Products/detail"
+  import PrivateRoutes from "./PrivateRoutes";
 function AllRoutes() {
   return (
     
@@ -14,7 +16,16 @@ function AllRoutes() {
         {/* <Route path="/womens" element={<Womens />} />
         <Route path="/mens" element={<Mens />} /> */}
         <Route path="/product/men" element={<Mens />} />
+        <Route path="/product/women" element={<Womens />} />
         <Route path="/login" element={<Login />}></Route>
+        <Route
+        path="/details"
+        element={
+          <PrivateRoutes>
+            <Details />
+          </PrivateRoutes>
+        }
+      ></Route>
       </Routes>
 
      

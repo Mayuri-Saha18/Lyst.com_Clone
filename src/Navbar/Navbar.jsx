@@ -3,11 +3,8 @@ import {
     Spacer,
   Box,
   Text,Image,
-  InputGroup,
-  InputLeftElement,
-  Input,
+ 
   } from "@chakra-ui/react";
-  import { SearchIcon } from "@chakra-ui/icons";
 import {React,useState} from "react";
  import { Link,NavLink,useNavigate } from "react-router-dom";
  import styles from "../styles/navbar.module.css";
@@ -17,7 +14,6 @@ import { AiOutlineHeart } from "react-icons/ai";
 import img1 from "../Image/dressup1.png"
 import { createContext, useContext } from "react";
 import { AuthContext } from "../Components/Context/AuthContext";
-import data from "../db.json"
   
 export const AppContext = createContext();
   function Navbar() {
@@ -25,16 +21,7 @@ export const AppContext = createContext();
     const [modalOpen, setModalOpen] = useState(false);
     
     const navigate = useNavigate();
-    // const link = [
-    //   {
-    //     path: "/womens",
-    //     title: "WOMEN",
-    //   },
-    //   {
-    //     path: "/mens",
-    //     title: "MEN",
-    //   },
-    // ];
+  
     return (
       <div style={
         {
@@ -125,7 +112,7 @@ export const AppContext = createContext();
               setModalOpen(!modalOpen);
             }}
           >
-            WOMAN
+            <Link className="Link_remove" to="/product/women"> WOMEN</Link>
           </span>
           <span
             onClick={() => {
@@ -140,18 +127,7 @@ export const AppContext = createContext();
               type="text"
               placeholder='Search (e.g. "Valentino dresses")'
             />
-            {/* {filderedDate.length != 0 && (
-              <div className="append_div">
-                {filderedDate.slice(0, 8).map((value, key) => {
-                  return (
-                    <div className="innter_append_div">
-                      <img src={value.Image}></img>
-                      <span>{value.title}</span>
-                    </div>
-                  );
-                })}
-              </div>
-            )} */}
+    
           </div>
         </div>
         <Box

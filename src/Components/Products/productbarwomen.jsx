@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import styledComponents from "styled-components";
 import { BsHeart } from "react-icons/bs";
+import styledComponents from "styled-components";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
 
 const Container = styledComponents.div`
     width:100%;
@@ -120,7 +119,8 @@ const Icondiv = styledComponents.div`
  }
 `;
 
-export const ProductbarM = () => {
+export const ProductbarW = () => {
+
   const [data, setData] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -142,7 +142,7 @@ export const ProductbarM = () => {
       .then((res) => {
         setData(res.data);
         const filteredData = res.data.filter((obj) => {
-          return obj.gender === "man";
+          return obj.gender === "woman";
         });
         setFiltered(filteredData);
       })
@@ -151,6 +151,7 @@ export const ProductbarM = () => {
 
   const handleSort = (e) => {
     if (e.target.value === "highToLow") {
+      console.log(e.target.value);
       setFiltered([...data].sort((a, b) => b.offPrice - a.offPrice));
     } else if (e.target.value === "lowToHigh") {
       setFiltered([...data].sort((a, b) => a.offPrice - b.offPrice));
@@ -174,18 +175,16 @@ export const ProductbarM = () => {
         <Box>
           {filtered.map((el) => (
             <ProductBox key={el.id}>
-              <Link to={`/product/${el.id}`}>
-                <ImageDiv>
-                  <Image src={el.Image}></Image>
-                </ImageDiv>
-              </Link>
+              <ImageDiv>
+                <Image src={el.Image}></Image>
+              </ImageDiv>
 
               <ProductInfo>
                 <Icondiv>
                   <BsHeart />
                 </Icondiv>
                 <InfoDiv>
-                  <ProTitle>{el.title} </ProTitle>
+                  <ProTitle>{el.title}</ProTitle>
                   <Details>{el.details}</Details>
                 </InfoDiv>
                 <Pricediv>
@@ -196,9 +195,10 @@ export const ProductbarM = () => {
                 <Button
                 onClick={() => handleClick(el)}
               >
-                <Link to="/details"> View Details</Link>
+               <Link to="/details"> View Details</Link>
               </Button>
               </ProductInfo>
+              
             </ProductBox>
           ))}
           
