@@ -6,7 +6,7 @@ import {
  
   } from "@chakra-ui/react";
 import {React,useState} from "react";
- import { Link,NavLink,useNavigate } from "react-router-dom";
+ import { Link,useNavigate } from "react-router-dom";
  import styles from "../styles/navbar.module.css";
  import "./Navbar.css";
  import { BsFillPersonFill } from "react-icons/bs";

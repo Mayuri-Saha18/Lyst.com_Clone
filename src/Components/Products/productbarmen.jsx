@@ -3,6 +3,7 @@ import styledComponents from "styled-components";
 import { BsHeart } from "react-icons/bs";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { ModalComponent } from "./modalcomponent";
 
 
 const Container = styledComponents.div`
@@ -30,11 +31,12 @@ const Box = styledComponents.div`
 `;
 const Button=styledComponents.div`
 
-background-color:blue;
+background-color:#202020;
                 color:white;
-                margin-top:4px;
+                margin-top:10px;
                 margin-left:4px;
-    
+                size:xs;
+                float:left;
                
 `;
 const Productcount = styledComponents.p`
@@ -89,6 +91,7 @@ const ProTitle = styledComponents.p`
 `;
 const Pricediv = styledComponents.div`
   display:flex;
+  margin-top:20px;
   justify-content:left;
 
 `;
@@ -174,12 +177,12 @@ export const ProductbarM = () => {
         <Box>
           {filtered.map((el) => (
             <ProductBox key={el.id}>
-              <Link to={`/product/${el.id}`}>
+            <Link to="/details">
                 <ImageDiv>
                   <Image src={el.Image}></Image>
                 </ImageDiv>
-              </Link>
-
+             
+              
               <ProductInfo>
                 <Icondiv>
                   <BsHeart />
@@ -193,17 +196,26 @@ export const ProductbarM = () => {
                   <Proprice>${el.offPrice}</Proprice>
                   <Offer>({el.off})</Offer>
                 </Pricediv>
-                <Button
+                
+
+              </ProductInfo>
+              
+              </Link>
+              <Button
                 onClick={() => handleClick(el)}
               >
-                <Link to="/details"> View Details</Link>
+              View Details
               </Button>
-              </ProductInfo>
             </ProductBox>
           ))}
           
         </Box>
       </main>
+      <ModalComponent
+    data={selectedBox}
+    isOpen={isModalVisible}
+    setIsOpen={setIsModalVisible}
+  />
     </Container>
   );
 };
