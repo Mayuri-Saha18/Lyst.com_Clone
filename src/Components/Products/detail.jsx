@@ -22,7 +22,7 @@ import {
       
     return (
       <div>
-        <Box mt={140} w="100%" p={4} pt={"42px"} color="white">
+        <Box mt={30} w="100%" p={4} pt={"42px"} color="white">
           <Heading color={"black"}>PRODUCT DETAILS</Heading>
         </Box>
         <SimpleGrid
