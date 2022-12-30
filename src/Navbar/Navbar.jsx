@@ -11,7 +11,6 @@ import {React,useState} from "react";
  import "./Navbar.css";
  import { BsFillPersonFill } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
-import img1 from "../Image/dressup1.png"
 import { createContext, useContext } from "react";
 import { AuthContext } from "../Components/Context/AuthContext";
   
@@ -46,7 +45,7 @@ export const AppContext = createContext();
               position="absolute"
              
               display={["block", "block", "none", "none"]}
-              src="https://i.postimg.cc/TPBz6N0w/Screenshot-2022-08-24-164137.png"
+              src="https://www.lyst.com/news/wp-content/uploads/2021/06/lyst-logo.png"
               alt="lyst"
             />
           </Link>
@@ -102,7 +101,7 @@ export const AppContext = createContext();
          <div className="inner_header_bottom">
         <div className="headder__bottom_img">
           <Link to="/">
-            <img src={img1} alt="lyst"/>
+            <img src="https://www.lyst.com/news/wp-content/uploads/2021/06/lyst-logo.png" alt="lyst"/>
           </Link>
         </div>
         <div className="header_bottom">

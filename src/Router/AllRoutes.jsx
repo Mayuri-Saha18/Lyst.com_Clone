@@ -1,12 +1,12 @@
 import React from "react";
  import { Routes, Route } from "react-router-dom";
 import  Home from "../Components/Home";
-// import Womens from "../Components/Womens";
-// import Mens from "../Components/Mens";
 import Login from "../Components/Login";
 import { Mens } from "../Components/Products/men";
 import { Womens } from "../Components/Products/women";
 import Details from "../Components/Products/detail"
+import Pay from "../Components/Products/Pay";
+import Payment from "../Components/Products/Payment";
   import PrivateRoutes from "./PrivateRoutes";
 function AllRoutes() {
   return (
@@ -26,6 +26,23 @@ function AllRoutes() {
           </PrivateRoutes>
         }
       ></Route>
+       <Route
+        path="/pay"
+        element={
+          <PrivateRoutes>
+            <Pay />
+          </PrivateRoutes>
+        }
+      ></Route>
+      <Route
+        path="/payment"
+        element={
+          <PrivateRoutes>
+            <Payment/>
+          </PrivateRoutes>
+        }
+      ></Route>
+      
       </Routes>
 
      

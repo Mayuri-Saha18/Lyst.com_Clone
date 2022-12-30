@@ -6,6 +6,7 @@ import {
     Select,
     SimpleGrid,
     Text,
+    Link
   } from "@chakra-ui/react";
   import React from "react";
   import { SiFlipkart } from "react-icons/si";
@@ -13,13 +14,10 @@ import {
   import Footer from "../../Navbar/Footer";
   import { useNavigate } from "react-router-dom";
   
-  
   const Details = () => {
     const navigate = useNavigate()
-  
     let data=JSON.parse(localStorage.getItem("details"))
     console.log('data: ', data);
-      
     return (
       <div>
         <Box mt={30} w="100%" p={4} pt={"42px"} color="white">
@@ -75,6 +73,7 @@ import {
             pr={5}
             w={["100%","100%","105%","110%"]}
             display={"flex"} alignItems="center" justifyContent={"space-between"}>
+             
               <Button
                 mt={3}
                 colorScheme={"blue"}
@@ -83,10 +82,11 @@ import {
                 fontSize={[15,15,17,17]}
                 color="white"
                 size="md"
-            
+                onClick={()=> navigate("/pay")}
               >
                 Go To Checkout
               </Button>
+             
               <AiOutlineHeart
               fontSize={35}
               style={{

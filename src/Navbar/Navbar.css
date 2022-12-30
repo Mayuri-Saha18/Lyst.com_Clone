@@ -1,12 +1,6 @@
 .main_header{
-  
-    /* border: 2px solid red; */
     border-bottom: 1px solid black;
-    /* height: 110px; */
-    
   }
-  
-  
   .header_top{
       /* border: 2px solid red; */
       display: flex;
@@ -39,7 +33,6 @@
   
   }
   .headder__bottom_img{
-      /* border: 2px solid red;   */
       display: flex;
       justify-content: center;
       align-content: center;
@@ -50,7 +43,6 @@
       width: 100px;
       height: 80px;
       margin-top: 10px;
-      border-radius: 50%;
   }
   .inner_header_bottom{
     margin-top: 40px;
