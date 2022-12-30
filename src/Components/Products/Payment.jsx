@@ -21,8 +21,10 @@ import Footer from "../../Navbar/Footer";
     const [ordered, setOrdered] = useState(false)
 if(ordered){
     return <>
-    <Image  m={"auto"} mt={250} src="https://c.tenor.com/0AVbKGY_MxMAAAAM/check-mark-verified.gif" alt="hjh" />
-    <Heading mt={10}>Your Order has been Booked..</Heading>
+    <Box  m={"auto"} w="20%">
+    <Image  m={"auto"}src="https://c.tenor.com/0AVbKGY_MxMAAAAM/check-mark-verified.gif" alt="hjh" />
+    <Heading m={"auto"} mt={10}>Your Order has been Booked..</Heading>
+    </Box>
     <Button
     onClick={()=> navigate("/")}
     backgroundColor={"black"}
@@ -38,7 +40,7 @@ if(ordered){
 }
     return (
       <div>
-        <Box mt={140} w="100%" p={4} pt={"42px"} color="white">
+        <Box  w="100%" p={4} pt={"42px"} color="white">
           <Heading color={"black"}>Select your payment method</Heading>
         </Box>
         <SimpleGrid w="85%" m="auto" textAlign={"left"} mt="10" columns={[1,1,2,2]}>
