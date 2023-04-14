@@ -1,9 +1,15 @@
+<h1>Lyst_Clone</h1>
+
+Lyst is a fashion technology company, and premium shopping app.
+For over 160 million annual shoppers, we offer the most comprehensive range of products from 17,000 of the world’s leading brands and stores.
+For brands and stores, our goal is to power success online. We drive meaningful direct sales within a highly trusted brand environment.
+
 <h4>Deployed_link</h4>
 https://hygjhvhdhd.netlify.app
 <h3>My logo creation for this website</h3>
 ![dressup1](https://user-images.githubusercontent.com/105915693/201514019-aaab643a-3155-461c-af72-ed381526059f.png)
 
-<h1>Lyst_Clone</h1>
+<h2>Home Page</h1>
 
 ![image](https://user-images.githubusercontent.com/105915693/210102463-139aa2f7-804c-4b68-b6ce-bcaef0a1eae2.png)
 ![image](https://user-images.githubusercontent.com/105915693/210102518-ba2a7303-7e1b-40b5-b986-47906c4b47c4.png)
